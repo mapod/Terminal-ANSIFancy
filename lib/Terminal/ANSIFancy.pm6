@@ -18,30 +18,6 @@ unit module Terminal::ANSIFancy:ver<0.1>;
 #  starting with fancy()
 #
 
-#
-# Looking for things to do?
-# These are all incomplete or nonexistant:
-#
-#  documentation; anyone can help with this.
-#
-#  option to extend the style language,
-#   fancy style-grammar => StyleGrammarWithExtraBits,
-#         style-actions => StyleActionsWithExtraBits;
-#
-#  216-color: interface would be like :fg216<r g b> (e.x. :fg216<6 6 6> is white)
-#                                  or :fg<r g b>
-#                                  or :style<rgb(0 6 0)> is blue
-#   - maybe??? implement riddiculous :style<some red, mostly blue, and a little green on all green, bold>
-#
-#  terminal knowledge (%*ENV<TERM> and terminfo?)
-#   - disable with :!check
-#   - don't disable coloring, just decide
-#     whether to use 8, 16, or 216 colors,
-#     unless the user explicitly enables with :check
-#   - not for anything that explicitly defines the number of colors,
-#     like :fg8 or :fg16
-#
-
 
 #
 # Internals:
