@@ -47,7 +47,7 @@ fancy style-grammar => StyleGrammarWithExtraBits,
 * 216-color: interface would be:
    - `:fg216<r g b>` (ex. :fg216<6 6 6> is white)
    - `:fg<r g b>`
-   - `:style<rgb(0 6 0)>` is blue.
+   - `:style<rgb(0 6 0)>` is green.
    - maybe??? implement riddiculous `:style<some red, mostly blue, and a little green on all green, bold>`
 
 * terminal knowledge (`%*ENV<TERM>` and terminfo?)
