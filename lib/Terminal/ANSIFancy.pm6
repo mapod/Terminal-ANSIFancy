@@ -133,7 +133,7 @@ sub fancy-escape (*@a) returns Escape is export(:internals)
 
 
 #
-# Internal:
+# Style:
 #
 
 
@@ -184,7 +184,8 @@ subset StyleStr is export(:style) where ! .defined || Style.parse: $_.join(' ');
 #| Adds ANSI escapes to each args,
 #| or just returns the escape sequence if no args are provided.
 sub fancy (**@args,
-           Bool :$reset, Bool :$bold, Bool :$underline, Bool :$inverse,
+           Bool :$reset,   Bool :$bold,   Bool :$underline,
+		   Bool :$inverse, Bool :$italic,
            Color16 :$fg,   Color16 :$bg,
            Color16 :$fg16, Color16 :$bg16,
            Color8  :$fg8,  Color8  :$bg8,
@@ -195,11 +196,14 @@ sub fancy (**@args,
 	@rez.push: attributes<reset>     if $reset;
 	@rez.push: attributes<bold>      if $bold;
 	@rez.push: attributes<underline> if $underline;
+	@rez.push: attributes<italic>    if $italic;
 	@rez.push: attributes<invert>    if $inverse;
 	# user explicitly un.*?s. i.e. bold=>False
 	@rez.push: attributes<unbold>      if      $bold.defined and not $bold;
 	@rez.push: attributes<ununderline> if $underline.defined and not $underline;
+	@rez.push: attributes<unitalic>    if    $italic.defined and not $italic;
 	@rez.push: attributes<uninvert>    if   $inverse.defined and not $inverse;
+
 
 	@rez.push: fg16-colors{   $fg.join(' ') } if $fg.defined;
 	@rez.push: bg16-colors{   $bg.join(' ') } if $bg.defined;
