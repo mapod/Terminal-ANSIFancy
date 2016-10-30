@@ -1,0 +1,13 @@
+{
+	"perl"        : "6.c",
+	"name"        : "Terminal::ANSIFancy",
+	"version"     : "0.1",
+	"description" : "Fancy strings using ANSI escape sequences.",
+	"authors"     : [ "M. Doust" ],
+	"provides"    : {
+		"Terminal::ANSIFancy" : "lib/Terminal/ANSIFancy.pm"
+	},
+	"depends"     : [ ],
+	"resources"   : [ ],
+	"source-url"  : "git://github.com/mapod/Terminal-ANSIFancy.git"
+}
